@@ -15,12 +15,13 @@
                 <div class="col-md-3 col-sm-6">
                     <div class="product-item">
                         <div class="item-thumb">
-                            {#<span class="note"><img src="upload/{{ p.id }}.jpg" alt=""></span>
+                           {# <span class="note"><img src="upload/{{ p.id }}.jpg" alt=""></span>#}
                             <div class="overlay">
                                 <div class="overlay-inner">
-                                    <a href="#nogo" class="view-detail">Add to Cart</a>
+                                    <a href="mailto:tomas.pavel@etnetera.cz?subject=3D tisk objednávka&body=Ahoj, chtěl/a bych si objednat {{ p.name }}(id: {{ p.id }}) v xxx barvě."
+                                       class="view-detail">Objednat</a>
                                 </div>
-                            </div> <!-- /.overlay -->#}
+                            </div> <!-- /.overlay -->
                             <img src="upload/product/{{ p.id }}.jpg" alt="">
                         </div> <!-- /.item-thumb -->
                         <h3>{{ p.name }}</h3>
