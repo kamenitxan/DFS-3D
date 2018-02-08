@@ -1,0 +1,34 @@
+{% extends "core" %}
+
+{% block title %} Index {% endblock %}
+
+{% block content %}
+    <div id="products" class="content-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h1 class="section-title">Produkty</h1>
+                </div> <!-- /.col-md-12 -->
+            </div> <!-- /.row -->
+            <div class="row">
+                {% for p in products %}
+                <div class="col-md-3 col-sm-6">
+                    <div class="product-item">
+                        <div class="item-thumb">
+                            {#<span class="note"><img src="upload/{{ p.id }}.jpg" alt=""></span>
+                            <div class="overlay">
+                                <div class="overlay-inner">
+                                    <a href="#nogo" class="view-detail">Add to Cart</a>
+                                </div>
+                            </div> <!-- /.overlay -->#}
+                            <img src="upload/product/{{ p.id }}.jpg" alt="">
+                        </div> <!-- /.item-thumb -->
+                        <h3>{{ p.name }}</h3>
+                        <span>Cena: <em class="text-muted">{{ p.price + 1}} Kč</em> - <em class="price">{{ p.price }} Kč</em></span>
+                    </div> <!-- /.product-item -->
+                </div> <!-- /.col-md-3 -->
+                {% endfor %}
+            </div> <!-- /.row -->
+        </div> <!-- /.container -->
+    </div> <!-- /#products -->
+{% endblock %}
