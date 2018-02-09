@@ -26,6 +26,7 @@
                         </div> <!-- /.item-thumb -->
                         <h3>{{ p.name }}</h3>
                         <span>Cena: <em class="text-muted">{{ p.price + 1}} Kč</em> - <em class="price">{{ p.price }} Kč</em></span>
+                        <p>{{ p.description }}</p>
                     </div> <!-- /.product-item -->
                 </div> <!-- /.col-md-3 -->
                 {% endfor %}

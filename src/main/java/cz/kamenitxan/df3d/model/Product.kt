@@ -13,10 +13,13 @@ class Product(
 		var name: String?,
 		@Column
 		@JakonField
-		var price: Int?
+		var price: Int?,
+		@Column
+		@JakonField
+		var description: String?
 ) : JakonObject(Product::class.java.name) {
 
-	constructor() : this("", 0)
+	constructor() : this("", 0, "")
 
 	override fun objectSettings(): ObjectSettings {
 		TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
