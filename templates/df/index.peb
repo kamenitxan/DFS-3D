@@ -9,6 +9,9 @@
                 <div class="col-md-12 text-center">
                     <h1 class="section-title">Produkty</h1>
                 </div> <!-- /.col-md-12 -->
+                <div class="col-md-offset-2 col-md-8 text-center bigger-text">
+                    <p>Objednávky je mozné vytvořit pomocí tlačítka objednat nebo na tomas.pavel@etnetera.cz</p>
+                </div>
             </div> <!-- /.row -->
             <div class="row">
                 {% for p in products %}
@@ -26,7 +29,7 @@
                         </div> <!-- /.item-thumb -->
                         <h3>{{ p.name }}</h3>
                         <span>Cena: <em class="text-muted">{{ p.price + 1}} Kč</em> - <em class="price">{{ p.price }} Kč</em></span>
-                        <p>{{ p.description }}</p>
+                        <p>{{ p.description | raw  }}</p>
                     </div> <!-- /.product-item -->
                 </div> <!-- /.col-md-3 -->
                 {% endfor %}

@@ -595,6 +595,7 @@ h6 {
 	backface-visibility: hidden;
 	position: relative;
 	z-index: 95;
+	min-height: 466px;
 }
 
 .product-item .item-thumb .note {
