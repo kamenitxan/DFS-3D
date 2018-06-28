@@ -6,6 +6,7 @@ import cz.kamenitxan.jakon.webui.entity.JakonField
 import javax.persistence.{Column, Entity, Transient}
 
 import scala.beans.BeanProperty
+import scala.language.postfixOps
 
 @Entity
 class Product(u: Unit = ()) extends JakonObject(classOf[Product].getName) with Ordered {
@@ -27,6 +28,8 @@ class Product(u: Unit = ()) extends JakonObject(classOf[Product].getName) with O
 	override def getObjectOrder: Double = objectOrder
 
 	override def setObjectOrder(objectOrder: Double): Unit = this.objectOrder = objectOrder
+
+	override def getUrl: String = id toString
 
 	@Transient
 	override val objectSettings = new ObjectSettings("fa-file-text-o")
