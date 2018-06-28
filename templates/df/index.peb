@@ -1,13 +1,13 @@
 {% extends "core" %}
 
-{% block title %} Index {% endblock %}
+{% block title %} {%if lang == "cs"%} DFŠ 3D {% else %}Officium liberum tabernam 3D{% endif %}{% endblock %}
 
 {% block content %}
     <div id="products" class="content-section">
         <div class="container">
             <div class="row">
                 <div class="col-md-12 text-center">
-                    <h1 class="section-title">Produkty</h1>
+                        <h1 class="section-title">{%if lang == "cs"%}Produkty{% else %}Producti{% endif %}</h1>
                 </div> <!-- /.col-md-12 -->
                 <div class="col-md-offset-2 col-md-8 text-center bigger-text">
                     <p>Objednávky je mozné vytvořit pomocí tlačítka objednat nebo na tomas.pavel@etnetera.cz</p>
@@ -18,7 +18,9 @@
                 <div class="col-md-3 col-sm-6">
                     <div class="product-item">
                         <div class="item-thumb">
-                           {# <span class="note"><img src="upload/{{ p.id }}.jpg" alt=""></span>#}
+                            {% if p.withModel%}
+                            <span class="note"><a data-fancybox data-type="iframe" data-src="view/{{ p.id }}.html" href="javascript:;" >3D</a> </span>
+                            {% endif %}
                             <div class="overlay">
                                 <div class="overlay-inner">
                                     <a href="mailto:tomas.pavel@etnetera.cz?subject=3D tisk objednávka&body=Ahoj, chtěl/a bych si objednat {{ p.name }}(id: {{ p.id }}) v xxx barvě."

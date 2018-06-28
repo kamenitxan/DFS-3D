@@ -13,8 +13,9 @@
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/templatemo_misc.css">
     <link rel="stylesheet" href="css/templatemo_style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" />
 
-    <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+
 
 
 </head>
@@ -26,9 +27,9 @@
         <div class="site-header">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-4 col-sm-6 col-xs-6">
+                    <div class="col-md-8">
                         <div id="templatemo_logo">
-                            <h1><a href="#">DFŠ 3D</a></h1>
+                            <h1><a href="#">{% block title %}Chatlin{% endblock %}</a></h1>
                         </div> <!-- /.logo -->
                     </div> <!-- /.col-md-4 -->
 
@@ -64,5 +65,7 @@
     <script src="js/bootstrap.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js"></script>
 </body>
 </html>

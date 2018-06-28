@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title></title>
+    <link href="../css/Madeleine.css" rel="stylesheet">
+    <script src="../js/stats.js"></script>
+    <script src="../js/detector.js"></script>
+    <script src="../js/three.min.js"></script>
+    <script src="../js/Madeleine.js"></script>
+
+
+</head>
+<body style="width: 400px">
+    <div id="target" class="madeleine"></div>
+
+    <script>
+        window.onload = function(){
+            var madeleine = new Madeleine({
+                target: 'target', // target div id
+                data: '../upload/stl/{{ p.id }}.stl', // data path
+                path: '../js' // path to source directory from current html file
+            });
+        };
+    </script>
+
+
+</body>
+</html>

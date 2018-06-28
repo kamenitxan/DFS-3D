@@ -23,3 +23,13 @@
   max-width: 100%;
   display: block;
 }
+
+
+.fancybox-content {
+	width: 600px !important;
+	height: 600px !important;
+}
+.product-item .item-thumb .note {
+	padding: 5px;
+	border: solid 1px #26b864;
+}
