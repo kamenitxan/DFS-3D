@@ -4,27 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
     <title></title>
-    <link href="../css/Madeleine.css" rel="stylesheet">
-    <script src="../js/stats.js"></script>
-    <script src="../js/detector.js"></script>
-    <script src="../js/three.min.js"></script>
-    <script src="../js/Madeleine.js"></script>
 
 
 </head>
-<body style="width: 400px">
-    <div id="target" class="madeleine"></div>
+<body style="margin: 0">
+    <div id="stl_viewer"></div>
+
+    <script src="../js/viewer/three.js"></script>
+    <script src="../js/viewer/STLLoader.js"></script>
+    <script src="../js/viewer/Detector.js"></script>
+    <script src="../js/viewer/OrbitControls.js"></script>
+    <script src="../js/viewer/handLoader.js"></script>
 
     <script>
-        window.onload = function(){
-            var madeleine = new Madeleine({
-                target: 'target', // target div id
-                data: '../upload/stl/{{ p.id }}.stl', // data path
-                path: '../js' // path to source directory from current html file
-            });
-        };
+      window.onload = function() {
+        init("../upload/stl/{{ p.id }}.stl", document.getElementById("stl_viewer"))
+      }
     </script>
 
-
+    <style>
+    #stl_viewer {
+      width: 595px;
+      height: 595px;
+    }
+    #stl_viewer canvas{
+      width: auto!important;
+      height: auto!important;
+    }
+    </style>
 </body>
 </html>

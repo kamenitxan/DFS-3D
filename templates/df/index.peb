@@ -1,6 +1,6 @@
 {% extends "core" %}
 
-{% block title %} **{{ i18n("common","TITLE") }}* {%if lang == "cs"%} DFŠ 3D {% else %}Officium liberum tabernam 3D{% endif %}{% endblock %}
+{% block title %}{%if lang == "cs"%} DFŠ 3D {% else %}Officium liberum tabernam 3D{% endif %}{% endblock %}
 
 {% block content %}
     <div id="products" class="content-section">
