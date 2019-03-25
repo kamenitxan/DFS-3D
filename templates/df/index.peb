@@ -1,6 +1,6 @@
-{% extends "core" %}
+{% extends "dfcore" %}
 
-{% block title %}{%if lang == "cs"%} DFŠ 3D {% else %}Officium liberum tabernam 3D{% endif %}{% endblock %}
+{% block title %}{%if lang == "cs"%} DFŠ 3D {% else %}Collatio lustralis liberum tabernam 3D{% endif %}{% endblock %}
 
 {% block content %}
     <div id="products" class="content-section">
@@ -23,8 +23,7 @@
                             {% endif %}
                             <div class="overlay">
                                 <div class="overlay-inner">
-                                    <a href="mailto:tomas.pavel@etnetera.cz?subject=3D tisk objednávka&body=Ahoj, chtěl/a bych si objednat {{ p.name }}(id: {{ p.id }}) v xxx barvě."
-                                       class="view-detail">Objednat</a>
+                                    <a href="https://rocketchat.etnetera.cz/direct/tomas.pavel" target="_blank" class="view-detail">Objednat</a>
                                 </div>
                             </div> <!-- /.overlay -->
                             <img src="upload/product/{{ p.id }}.jpg" alt="">

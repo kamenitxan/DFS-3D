@@ -2,28 +2,29 @@ package cz.kamenitxan.df3d.pages
 
 import java.util
 
-import cz.kamenitxan.jakon.core.customPages.CustomPage
-import cz.kamenitxan.jakon.webui.ObjectSettings
-import cz.kamenitxan.df3d.model.Product
+import cz.kamenitxan.df3d.model.ProductService
+import cz.kamenitxan.jakon.core.customPages.AbstractCustomPage
 import cz.kamenitxan.jakon.core.model.Dao.DBHelper
 import cz.kamenitxan.jakon.core.template.TemplateUtils
+import cz.kamenitxan.jakon.webui.ObjectSettings
+import scala.collection.JavaConverters._
 
-class IndexPage extends CustomPage {
+class IndexPage extends AbstractCustomPage {
+
 	override protected def generate(): Unit = {
 		val engine = TemplateUtils.getEngine
 
-		val session = DBHelper.getSession
-		session.beginTransaction()
-		val products = session.createCriteria(classOf[Product]).list()
-		session.getTransaction.commit()
+		implicit val conn = DBHelper.getConnection
+		val products = ProductService.getAll
+		conn.close()
 
 		val model = new util.HashMap[String, AnyRef]()
-		model.put("products", products)
+		model.put("products", products.asJava)
 		model.put("lang", "cs")
 		engine.render("index", "index", model)
 
 		val latinModel = new util.HashMap[String, AnyRef]()
-		latinModel.put("products", products)
+		latinModel.put("products", products.asJava)
 		latinModel.put("lang", "la")
 		engine.render("index", "latin", latinModel)
 	}
