@@ -27,10 +27,14 @@
         <div class="site-header">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-8">
+                    <div class="col-md-12">
                         <div id="templatemo_logo">
-                            <h1><a href="#">{% block title %}Chatlin{% endblock %}</a></h1>
+                            <h1><a href="#">{% block title %}Jakon{% endblock %}</a></h1>
                         </div> <!-- /.logo -->
+                        <div id="lang">
+                            <a href="index.html"><img src="images/flag_cz.png" alt="czech"></a>
+							<a href="latin.html"><img src="images/flag_va.png" alt="latin"></a>
+                        </div>
                     </div> <!-- /.col-md-4 -->
 
                 </div> <!-- /.row -->

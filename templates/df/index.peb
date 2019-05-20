@@ -1,16 +1,16 @@
 {% extends "dfcore" %}
 
-{% block title %}{%if lang == "cs"%} DFŠ 3D {% else %}Collatio lustralis liberum tabernam 3D{% endif %}{% endblock %}
+{% block title %}{{ i18n("common","TITLE") }}{% endblock %}
 
 {% block content %}
     <div id="products" class="content-section">
         <div class="container">
             <div class="row">
                 <div class="col-md-12 text-center">
-                        <h1 class="section-title">{%if lang == "cs"%}Produkty{% else %}Producti{% endif %}</h1>
+                        <h1 class="section-title">{{ i18n("common","PRODUCTS") }}</h1>
                 </div> <!-- /.col-md-12 -->
                 <div class="col-md-offset-2 col-md-8 text-center bigger-text">
-                    <p>Objednávky je mozné vytvořit pomocí tlačítka objednat nebo na tomas.pavel@etnetera.cz</p>
+                    <p>{{ i18n("common","INFO") }}</p>
                 </div>
             </div> <!-- /.row -->
             <div class="row">
@@ -23,13 +23,13 @@
                             {% endif %}
                             <div class="overlay">
                                 <div class="overlay-inner">
-                                    <a href="https://rocketchat.etnetera.cz/direct/tomas.pavel" target="_blank" class="view-detail">Objednat</a>
+                                    <a href="https://rocketchat.etnetera.cz/direct/tomas.pavel" target="_blank" class="view-detail">{{ i18n("common","ORDER") }} </a>
                                 </div>
                             </div> <!-- /.overlay -->
                             <img src="upload/product/{{ p.id }}.jpg" alt="">
                         </div> <!-- /.item-thumb -->
                         <h3>{{ p.name }}</h3>
-                        <span>Cena: <em class="text-muted">{{ p.price + 1}} Kč</em> - <em class="price">{{ p.price }} Kč</em></span>
+                        <span>{{ i18n("common","PRICE") }}: <em class="text-muted">{{ p.price + 1}} Kč</em> - <em class="price">{{ p.price }} Kč</em></span>
                         <p>{{ p.description | raw  }}</p>
                     </div> <!-- /.product-item -->
                 </div> <!-- /.col-md-3 -->
