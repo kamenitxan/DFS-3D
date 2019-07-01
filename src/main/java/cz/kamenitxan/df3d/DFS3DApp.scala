@@ -10,14 +10,13 @@ import org.slf4j.LoggerFactory
 class DFS3DApp extends JakonInit{
 	private val logger = LoggerFactory.getLogger(this.getClass)
 
-	daoSetup = () => {
-		DBHelper.addDao(classOf[Product])
-	}
-
-
-
 	Director.registerCustomPage(new IndexPage)
 	Director.registerControler(new ModelController)
+
+
+	override def daoSetup(): Unit = {
+		DBHelper.addDao(classOf[Product])
+	}
 
 	override def adminControllers(): Unit = {
 		super.adminControllers()

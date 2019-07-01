@@ -61,7 +61,8 @@ textarea {
 }
 
 .item-small img, .item-large img, .product-item .item-thumb img {
-	width: 100%;
+	min-width: 100%;
+	height: 466px;
 }
 
 /* ==========================================================================

@@ -29,18 +29,19 @@ class Product(u: Unit = ()) extends JakonObject(classOf[Product].getName) with O
 
 	override def setObjectOrder(objectOrder: Double): Unit = this.objectOrder = objectOrder
 
-	override def getUrl: String = id toString
+	override def createUrl: String = id toString
 
 	@Transient
 	override val objectSettings = new ObjectSettings("fa-file-text-o")
 
 	override def createObject(jid: Int, conn: Connection): Int = {
-		val stmt = conn.prepareStatement("INSERT INTO Product (name, price, description, withModel, objectOrder) VALUES (?, ?, ?, ?, ?)")
+		val stmt = conn.prepareStatement("INSERT INTO Product (name, price, description, withModel, objectOrder, id) VALUES (?, ?, ?, ?, ?, ?)")
 		stmt.setString(1, name)
 		stmt.setInt(2, price)
 		stmt.setString(3, description)
 		stmt.setBoolean(4, withModel)
 		stmt.setDouble(5, objectOrder)
+		stmt.setInt(6, jid)
 		executeInsert(stmt)
 	}
 

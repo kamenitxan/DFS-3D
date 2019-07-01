@@ -19,7 +19,7 @@ class ModelController extends IControler {
 		products.foreach(m => {
 			val context = new util.HashMap[String, AnyRef]()
 			context.put("p", m)
-			val path = "view/" + m.getUrl
+			val path = "view/" + m.url
 			e.render(template, path, context)
 		})
 	}
