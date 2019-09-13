@@ -4,7 +4,7 @@ import cz.kamenitxan.df3d.model.Product
 import cz.kamenitxan.df3d.pages.{IndexPage, ModelController}
 import cz.kamenitxan.jakon.JakonInit
 import cz.kamenitxan.jakon.core.Director
-import cz.kamenitxan.jakon.core.model.Dao.DBHelper
+import cz.kamenitxan.jakon.core.database.DBHelper
 import org.slf4j.LoggerFactory
 
 class DFS3DApp extends JakonInit{

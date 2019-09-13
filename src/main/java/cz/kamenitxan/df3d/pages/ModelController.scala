@@ -4,8 +4,9 @@ import java.util
 
 import cz.kamenitxan.df3d.model.ProductService
 import cz.kamenitxan.jakon.core.controler.IControler
-import cz.kamenitxan.jakon.core.model.Dao.DBHelper
-import cz.kamenitxan.jakon.core.template.{TemplateEngine, TemplateUtils}
+import cz.kamenitxan.jakon.core.database.DBHelper
+import cz.kamenitxan.jakon.core.template.TemplateEngine
+import cz.kamenitxan.jakon.core.template.utils.TemplateUtils
 
 class ModelController extends IControler {
 	val template = "model"

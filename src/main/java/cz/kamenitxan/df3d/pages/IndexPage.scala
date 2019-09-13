@@ -5,8 +5,8 @@ import java.util
 import cz.kamenitxan.df3d.model.ProductService
 import cz.kamenitxan.jakon.core.configuration.Settings
 import cz.kamenitxan.jakon.core.customPages.AbstractCustomPage
-import cz.kamenitxan.jakon.core.model.Dao.DBHelper
-import cz.kamenitxan.jakon.core.template.TemplateUtils
+import cz.kamenitxan.jakon.core.database.DBHelper
+import cz.kamenitxan.jakon.core.template.utils.TemplateUtils
 import cz.kamenitxan.jakon.webui.ObjectSettings
 
 import scala.collection.JavaConverters._

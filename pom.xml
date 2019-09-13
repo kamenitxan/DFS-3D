@@ -13,13 +13,20 @@
             <id>nexus</id>
             <url>http://tomas-pavel-pc.etnetera.mh.etn:8081/repository/maven-snapshots/</url>
         </repository>
+        <repository>
+            <id>app-engine</id>
+            <url>https://kamenitxans-maven-repository.appspot.com</url>
+            <snapshots>
+                <updatePolicy>always</updatePolicy>
+            </snapshots>
+        </repository>
     </repositories>
 
     <dependencies>
         <dependency>
             <groupId>cz.kamenitxan</groupId>
             <artifactId>jakon</artifactId>
-            <version>0.2-20190701.120335-84</version>
+            <version>0.2-20190909.161611-100</version>
         </dependency>
     </dependencies>
 
